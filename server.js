@@ -355,9 +355,9 @@ app.post('/api/orders', upload.single('screenshot'), async (req, res) => {
   }
 });
 
-// Catch-all: serve frontend
+// Catch-all: API only (frontend hosted separately on Netlify)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+  res.status(404).json({ message: 'API endpoint not found' });
 });
 
 // ── Start Server ────────────────────────────
