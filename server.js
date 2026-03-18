@@ -26,7 +26,7 @@ app.use(cors({
 app.use(express.json());
 
 // Serve frontend static files (for combined deploy)
-app.use(express.static(path.join(__dirname, '../frontend')));
+//app.use(express.static(path.join(__dirname, '../frontend')));
 
 // ── MongoDB Connection ──────────────────────
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/kanniyamman_oil';
